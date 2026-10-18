@@ -2,23 +2,6 @@
 __pycache__/
 *.pyc
 .venv/
-venv/
-.ipynb_checkpoints/
 
-# Node
-node_modules/
-
-# Secrets et environnement
 .env
 
-# Gros fichiers de donnees (SMAP, MODIS, etc.)
-*.h5
-*.hdf
-*.hdf5
-*.nc
-*.nc4
-*.tif
-*.tiff
-
-# Systeme
-.DS_Store
