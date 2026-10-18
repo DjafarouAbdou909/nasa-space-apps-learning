@@ -19,12 +19,12 @@ Ce dossier contient les données du projet (défi NASA SPACE : rotations cultura
 
 ## Sources de données
 
-| Source | Contenu | Statut | Fichiers |
-|---|---|---|---|
-| NASA POWER (journalier, communauté AG) | Climat : température, humidité, pluie, rayonnement, vent, pression, évaporation, humidité du sol | Téléchargé | `raw/power_<site>_daily_1981_2025.csv` |
-| NASA AppEEARS (MOD16A2GF, MOD13Q1, SMAP) | Évapotranspiration, végétation (NDVI), humidité du sol | À télécharger | `raw/appeears_<produit>.csv` |
-| SoilGrids (ISRIC) | Propriétés du sol : argile, sable, limon, carbone organique, pH, CEC, densité, azote | À télécharger | `raw/soilgrids_<site>.json` |
-| FAO EcoCrop | Besoins des cultures : température, pluie, pH, durée du cycle | À compiler | `raw/ecocrop_cultures.csv` |
+| Source | Contenu | Statut |
+|---|---|---|
+| NASA POWER (journalier, communauté AG) | Climat : température, humidité, pluie, rayonnement, vent, pression, évaporation, humidité du sol | Téléchargé |
+| NASA AppEEARS (MOD16A2GF, MOD13Q1, SMAP) | Évapotranspiration, végétation (NDVI), humidité du sol | À télécharger |
+| SoilGrids (ISRIC) | Propriétés du sol : argile, sable, limon, carbone organique, pH, CEC, densité, azote | À télécharger |
+| FAO EcoCrop | Besoins des cultures : température, pluie, pH, durée du cycle | À compiler |
 
 ## NASA POWER : détails
 
