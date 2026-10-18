@@ -75,3 +75,4 @@ df = df.replace(-999, pd.NA)
 ## Reproduire un téléchargement POWER
 
 Exemple pour Abidjan (latitude 5.36, longitude -4.01). Pour un autre site, changer seulement ces deux nombres dans l’URL (la longitude vient avant la latitude) :
+https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,T2MDEW,RH2M,QV2M,PRECTOTCORR,ALLSKY_SFC_SW_DWN,CLRSKY_SFC_SW_DWN,ALLSKY_SFC_LW_DWN,WS2M,PS,TS,EVLAND,EVPTRNS,GWETTOP,GWETROOT,GWETPROF&community=AG&longitude=-4.01&latitude=5.36&start=19810101&end=20251231&format=CSV
