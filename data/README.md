@@ -74,4 +74,4 @@ df = df.replace(-999, pd.NA)
 
 ## Reproduire un téléchargement POWER
 
-Remplacer `LATITUDE` et `LONGITUDE` dans l'URL :
+Exemple pour Abidjan (latitude 5.36, longitude -4.01). Pour un autre site, changer seulement ces deux nombres dans l’URL (la longitude vient avant la latitude) :
