@@ -59,6 +59,23 @@ Ce dossier contient les données du projet (défi NASA SPACE : rotations cultura
   * `MOD16A2GF_ET` : Évapotranspiration (mm/8 jours).
   * `SMAP_ZONE_RACINAIRE` : Humidité du sol (m³/m³).
 
+## Guide d'exécution du pipeline (Ephrem)
+
+Pour exécuter les scripts d'ingestion et régénérer ces fichiers localement sur vos environnements, ouvrez votre terminal à la racine du projet et lancez les commandes suivantes :
+
+1. **Nettoyage climatique complet (NASA POWER) :**
+   ```bash
+   python src/ingestion/load_power.py
+   ```
+2. **Téléchargement de la carte de sol (SoilGrids) :**
+   ```bash
+   python src/ingestion/fetch_soilgrids.py
+   ```
+3. **Génération des structures d'exemple (NASA AppEEARS) :**
+   ```bash
+   python src/ingestion/fetch_appeears.py
+   ```
+
 ## Consignes pour l'équipe (Michel, Ronel, Djafarou)
 
 Les fichiers climatiques épurés se chargent directement avec Pandas en une seule ligne :
