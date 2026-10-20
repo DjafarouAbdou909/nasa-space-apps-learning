@@ -1,2 +1,13 @@
-data/
+<<<<<<< HEAD
+# Python
+__pycache__/
+*.pyc
 .venv/
+
+.env
+
+=======
+data/
+>>>>>>> origin/main
+.venv/
+__pycache__/
