@@ -58,7 +58,7 @@ Ces cibles sont à valider par l'équipe.
 
 ## 6. Ressources, contraintes, hypothèses
 
-**Ressources.** Équipe de 7 personnes : 2 Data Scientists (Michel, Ronel), 1 Data Engineer (Ephrem), 1 ML (Djafarou Abdou), 2 Backend (Souleymane, Aimard), 1 Product scientifique (Aimard), Frontend à attribuer. Données : NASA POWER, GROW-Africa, SoilGrids, AppEEARS, EcoCrop. Dépôt GitHub commun.
+**Ressources.** Équipe de 6 personnes : 2 Data Scientists (Michel, Ronel), 1 Data Engineer (Ephrem), 1 ML (Djafarou Abdou), 1 Backend (Souleymane), 1 Product scientifique et Frontend(Aimard). Données : NASA POWER, GROW-Africa, SoilGrids, AppEEARS, EcoCrop. Dépôt GitHub commun.
 
 **Contraintes.**
 - Délai : date limite du défi à confirmer auprès des organisateurs (D6).
@@ -79,5 +79,4 @@ Ces cibles sont à valider par l'équipe.
 | Coordonnées dégradées à 5 km | Moyennes sur un rayon ; le dire dans l'interface |
 | Rotation non observable dans les données | Règles sourcées ; ne pas prétendre prouver l'effet |
 | Retard du Data Engineer | Cahier des charges de données clair ; Backend en renfort au début |
-| Aucun responsable Frontend | Attribuer le rôle en semaine 1 ; Streamlit pour aller vite |
 
