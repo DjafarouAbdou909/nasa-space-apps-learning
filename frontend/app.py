@@ -67,6 +67,11 @@ CRITERES = {
     "rendement": ("Rendement attendu (t/ha)", "modélisé"),
     "risque": ("Risque (/100, plus bas = mieux)", "indirect"),
 }
+NATURES = {
+    "observé": ("green", "Mesuré directement (ex. NDVI MODIS, rendement par carré)."),
+    "modélisé": ("blue", "Estimé par un modèle (ex. pluie NASA POWER, prédiction du modèle)."),
+    "indirect": ("orange", "Déduit d'autres variables, jamais mesuré directement."),
+}
 BASE = {
     "R1": {"eau": 70, "sol": 80, "rendement": 2.1, "risque": 30},
     "R2": {"eau": 45, "sol": 60, "rendement": 3.2, "risque": 50},
@@ -88,6 +93,9 @@ def get_results(zone, rotation_id, scenario):
 st.set_page_config(page_title="African Crop Yield Intelligence", layout="wide")
 st.title("Comparer deux rotations culturales")
 st.warning("Données factices pour la maquette. Ces données décrivent le contexte d'une zone, pas l'état d'une parcelle.")
+with st.expander("Comment lire la nature des données ?"):
+    for nom, (couleur, description) in NATURES.items():
+        st.markdown(f":{couleur}-badge[{nom}] {description}")
 
 zone = st.sidebar.selectbox("Zone", ZONES)
 scenario = st.sidebar.radio("Scénario climatique", list(SCENARIOS), format_func=SCENARIOS.get)
@@ -103,7 +111,8 @@ for col, defaut, lettre in ((col_a, "R1", "A"), (col_b, "R2", "B")):
         for critere, (titre, nature) in CRITERES.items():
             r = res[critere]
             st.metric(titre, r["valeur"])
-            st.caption(f"Intervalle : {r['bas']} à {r['haut']} · Nature : {nature}")
+            st.caption(f"Intervalle : {r['bas']} à {r['haut']}")
+            st.markdown(f":{NATURES[nature][0]}-badge[{nature}]")
 
 st.divider()
 st.subheader("Comparaison par critère")
