@@ -11,3 +11,6 @@ data/
 >>>>>>> origin/main
 .venv/
 __pycache__/
+# Allow processed parquet files
+!data/processed/
+!data/processed/*.parquet
