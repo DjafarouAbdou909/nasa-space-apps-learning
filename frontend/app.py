@@ -53,6 +53,7 @@
 import altair as alt
 import pandas as pd
 import streamlit as st
+from climat import afficher_climat
 
 ZONES = ["Abidjan", "Bouaké", "Korhogo", "Yamoussoukro"]
 ROTATIONS = {
@@ -117,20 +118,7 @@ for libelle, res in choix:
 df = pd.DataFrame(lignes)
 
 colonnes = st.columns(2)
-for i, (critere, (titre, nature)) in enumerate(CRITERES.items()):
-    sub = df[df["critere"] == critere]
-    base = alt.Chart(sub).encode(
-        x=alt.X("rotation:N", title=None, axis=alt.Axis(labelAngle=0, labelLimit=220))
-    )
-    barres = base.mark_bar().encode(
-        y=alt.Y("valeur:Q", title=None),
-        color=alt.Color("rotation:N", legend=None),
-    )
-    erreurs = base.mark_errorbar(ticks=True, color="#ff9f1c").encode(
-        y=alt.Y("bas:Q"), y2="haut:Q"
-    )
-    graphique = (barres + erreurs).properties(title=f"{titre} · {nature}", height=260)
-    colonnes[i % 2].altair_chart(graphique)
+
 
 
 
